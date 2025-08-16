@@ -33,6 +33,6 @@ class CustomUserAdmin(BaseUserAdmin):
 
 
 # Customize admin site branding
-admin.site.site_header = 'Shohor Bari Admin'
-admin.site.site_title = 'Shohor Bari Admin Portal'
-admin.site.index_title = 'Welcome to Shohor Bari Admin Portal'
+admin.site.site_header = ' Library Management Admin'
+admin.site.site_title = ' Library Management Admin Portal'
+admin.site.index_title = 'Welcome to  Library Management Admin Portal'
