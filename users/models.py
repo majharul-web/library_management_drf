@@ -2,6 +2,9 @@ from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.core.validators import validate_email, FileExtensionValidator
 from django.core.exceptions import ValidationError
+from cloudinary.models import CloudinaryField
+from api.validators import validate_file_size
+from rest_framework import serializers
 
 
 # =========================
@@ -107,6 +110,15 @@ class CustomUser(AbstractUser):
     address = models.TextField(blank=True, null=True)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='user')
     membership_date = models.DateField(auto_now_add=True)
+    profile_image = CloudinaryField(
+        'image',
+        blank=True,
+        null=True,
+        validators=[
+            validate_file_size,
+            FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png'])
+        ]
+    )
 
     # Authentication will be based on email instead of username
     USERNAME_FIELD = 'email'

@@ -13,7 +13,7 @@ class CustomUserAdmin(BaseUserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         ('Personal Info', {
-            'fields': ('first_name', 'last_name', 'address', 'phone_number',)
+            'fields': ('first_name', 'last_name', 'address', 'phone_number', 'profile_image')
         }),
         ('Permissions', {
             'fields': ('is_staff', 'is_active', 'is_superuser', 'groups', 'user_permissions')
@@ -33,6 +33,6 @@ class CustomUserAdmin(BaseUserAdmin):
 
 
 # Customize admin site branding
-admin.site.site_header = 'Library Admin'
-admin.site.site_title = 'Library Admin Portal'
-admin.site.index_title = 'Welcome to Library Admin Portal'
+admin.site.site_header = 'Shohor Bari Admin'
+admin.site.site_title = 'Shohor Bari Admin Portal'
+admin.site.index_title = 'Welcome to Shohor Bari Admin Portal'
