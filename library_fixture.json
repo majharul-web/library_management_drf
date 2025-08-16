@@ -1,0 +1,191 @@
+[
+    {
+        "model": "library.category",
+        "pk": 1,
+        "fields": {
+            "name": "Science Fiction"
+        }
+    },
+    {
+        "model": "library.category",
+        "pk": 2,
+        "fields": {
+            "name": "Software Engineering"
+        }
+    },
+    {
+        "model": "library.category",
+        "pk": 3,
+        "fields": {
+            "name": "History"
+        }
+    },
+    {
+        "model": "library.category",
+        "pk": 4,
+        "fields": {
+            "name": "Mystery"
+        }
+    },
+    {
+        "model": "library.category",
+        "pk": 5,
+        "fields": {
+            "name": "Fantasy"
+        }
+    },
+    {
+        "model": "library.category",
+        "pk": 6,
+        "fields": {
+            "name": "Philosophy"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 1,
+        "fields": {
+            "name": "Isaac Asimov",
+            "biography": "Isaac Asimov was a prolific science fiction author and professor of biochemistry."
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 2,
+        "fields": {
+            "name": "Robert C. Martin",
+            "biography": "Uncle Bob, well known for his influential books on software engineering and clean code."
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 3,
+        "fields": {
+            "name": "Yuval Noah Harari",
+            "biography": "Historian and author of bestselling books like 'Sapiens' and 'Homo Deus'."
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 4,
+        "fields": {
+            "name": "Agatha Christie",
+            "biography": "Agatha Christie was a British writer known for her 66 detective novels and 14 short story collections."
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 5,
+        "fields": {
+            "name": "J.K. Rowling",
+            "biography": "Author of the Harry Potter fantasy series, one of the best-selling book series in history."
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 6,
+        "fields": {
+            "name": "Plato",
+            "biography": "Greek philosopher, founder of the Academy in Athens, and author of many philosophical works."
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 1,
+        "fields": {
+            "title": "Foundation",
+            "author": 1,
+            "ISBN": "978-0-553-80371-0",
+            "category": 1,
+            "availability_status": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 2,
+        "fields": {
+            "title": "Clean Code",
+            "author": 2,
+            "ISBN": "978-0-13-235088-4",
+            "category": 2,
+            "availability_status": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 3,
+        "fields": {
+            "title": "Sapiens: A Brief History of Humankind",
+            "author": 3,
+            "ISBN": "978-0-06-231609-7",
+            "category": 3,
+            "availability_status": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 4,
+        "fields": {
+            "title": "Murder on the Orient Express",
+            "author": 4,
+            "ISBN": "978-0-00-711931-8",
+            "category": 4,
+            "availability_status": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 5,
+        "fields": {
+            "title": "Harry Potter and the Philosopher's Stone",
+            "author": 5,
+            "ISBN": "978-0-7475-3269-9",
+            "category": 5,
+            "availability_status": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 6,
+        "fields": {
+            "title": "The Republic",
+            "author": 6,
+            "ISBN": "978-0-14-045511-3",
+            "category": 6,
+            "availability_status": true
+        }
+    },
+    {
+        "model": "library.borrowrecord",
+        "pk": 1,
+        "fields": {
+            "book": 1,
+            "user": 1,
+            "borrow_date": "2025-08-01",
+            "return_date": null,
+            "is_returned": false
+        }
+    },
+    {
+        "model": "library.borrowrecord",
+        "pk": 2,
+        "fields": {
+            "book": 2,
+            "user": 2,
+            "borrow_date": "2025-07-20",
+            "return_date": "2025-08-05",
+            "is_returned": true
+        }
+    },
+    {
+        "model": "library.borrowrecord",
+        "pk": 3,
+        "fields": {
+            "book": 4,
+            "user": 1,
+            "borrow_date": "2025-08-10",
+            "return_date": null,
+            "is_returned": false
+        }
+    }
+]
